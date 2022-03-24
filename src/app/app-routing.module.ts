@@ -7,6 +7,11 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 const routes: Routes = [
   { path: '', component: HomeComponent, },
   {
+    path: 'voting-result',
+    loadChildren: () => import('./modules/application/voting2/voting2.module')
+      .then(mod => mod.Voting2Module)
+  },
+  {
     path: 'crud',
     loadChildren: () => import('./modules/application/example-crud/tutorial.module')
       .then(mod => mod.TutorialModule)
