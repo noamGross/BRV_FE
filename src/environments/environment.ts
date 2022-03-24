@@ -9,6 +9,7 @@ export const environment = {
   },
   urlNews: './assets/params/json/mock/trailers.json',
   urlMovies: './assets/params/json/mock/votes.json',
+  urlVotes: './assets/params/json/mock/votes.json',
 
   /* urlNews: 'http://localhost:5004/trailers', */
   // url: 'https://api.ganatan.com/tutorials',
