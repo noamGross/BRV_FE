@@ -8,12 +8,11 @@ import { FormBuilder } from '@angular/forms';
 })
 export class BoxofficeFormComponent implements OnInit {
   exampleForm = this.fb.group({
-    name: [''],
-    releaseDate: [''],
-    franchise: [''],
-    budget: [''],
-    worldwide: [''],
-    summary: [''],
+    Company_Name: [''],
+    VotingDate: [''],
+    SetDate: [''],
+    IssueVote: [''],
+    voting_details: [''],
   });
 
   constructor(private fb: FormBuilder) { }
@@ -24,24 +23,23 @@ export class BoxofficeFormComponent implements OnInit {
 
   updateControls(): void {
     this.exampleForm.patchValue({
-      name: 'Avengers: Endgame',
-      releaseDate: '26/04/2019',
-      franchise: true,
-      budget: 356000000,
-      worldwide: 2797800564,
-      summary: 'After the devastating events of Avengers: Infinity War (2018), ' +
+      Company_Name: 'Avengers: Endgame',
+      VotingDate: '26/04/2019',
+      SetDate: '26/04/2019',
+      IssueVote:"dsfsdfsdfsd",
+      voting_details: 'After the devastating events of Avengers: Infinity War (2018), ' +
         'the universe is in ruins.'
     });
   }
 
   resetControls(): void {
     this.exampleForm.patchValue({
-      name: null,
-      releaseDate: null,
-      franchise: true,
+      Company_Name: null,
+      VotingDate: null,
+      SetDate: true,
       budget: null,
-      worldwide: null,
-      summary: null,
+      IssueVote: null,
+      voting_details: null,
     });
   }
 

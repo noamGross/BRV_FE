@@ -1,23 +1,22 @@
 export class Item {
-  id: number;
-  youtubeLink: string;
-  name: string;
-  releaseDate: string;
-  wikipediaLink: string;
-  domestic: number;
-  international: number;
-  worldwide: number;
-  budget: number;
+  CompanyID: string;
+  CompanyName: string;
+  SecurityName:string;
+  SecurityNumber:string;
+  MeetingEffectiveDate:string;
+  MeetingCloseDateTime:string;
+  VotingItemSubject:string
+
+
+
 
   constructor() {
-    this.id = 0;
-    this.youtubeLink = '';
-    this.name = '';
-    this.releaseDate = '';
-    this.wikipediaLink = '';
-    this.domestic = 0;
-    this.international = 0;
-    this.worldwide = 0;
-    this.budget = 0;
+    this.CompanyID='';
+  this.CompanyName='';
+  this.SecurityName='';;
+  this.SecurityNumber='';
+  this.MeetingEffectiveDate='';
+  this.MeetingCloseDateTime='';
+  this.VotingItemSubject='';
   }
 }

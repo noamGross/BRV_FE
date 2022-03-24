@@ -3,13 +3,13 @@
     <div class="col">
       <div class="d-flex">
         <div class="d-flex me-auto">
-          <input type="text" class="form-control me-2" id="name" placeholder="movies ...">
+          <input type="text" class="form-control me-2" id="name" placeholder="Votes ...">
           <button type="button" class="btn nga-btn-boxoffice-primary btn-sm nga-btn-boxoffice"><i class="fa fa-search"></i></button>
         </div>
         <div class="d-flex me-auto d-none d-md-block">
           <div class="pt-2 ml-4">
             <b>
-              <span style="color:gray;">7 Movies</span>
+              <span style="color:gray;">Future Votes</span>
             </b>
           </div>
         </div>
@@ -218,23 +218,15 @@
             <th style="cursor: pointer"
               class="text-info font-weight-bold text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
               Rank<i class="ms-1 fas fa-arrows-alt-v filterEnabled"></i></th>
-            <th class="text-center text-danger">Trailer</th>
-            <th style="cursor: pointer" class="text-primary font-weight-bold text-center">Name<i
-                class="ms-1 fas fa-long-arrow-alt-up filterEnabled"></i></th>
-            <th
-              class="text-success font-weight-bold text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              Wiki</th>
-            <th style="cursor: pointer" class="font-weight-bold text-center">Date<i
+            <th class="text-center text-danger">Company Name</th>
+            <th class="text-center text-danger">Security</th>
+            <th style="cursor: pointer" class="font-weight-bold text-center">Meeting Close DateTime<i
                 class="ms-1 fas fas fa-arrows-alt-v filterEnabled"></i></th>
             <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              Worldwide<i class="ms-1 fas fa-long-arrow-alt-up"></i>
+              Meeting Effective Date<i class="ms-1 fas fa-long-arrow-alt-up"></i>
             </th>
             <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              International<i class="ms-1 fas fa-arrows-alt-v filterEnabled"></i></th>
-            <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              Domestic<i class="ms-1 fas fa-arrows-alt-v filterEnabled"></i></th>
-            <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              Budget<i class="ms-1 fas fas fa-arrows-alt-v filterEnabled"></i></th>
+              Voting Item Subject<i class="ms-1 fas fa-arrows-alt-v filterEnabled"></i></th>
           </tr>
         </thead>
         <tbody>
@@ -243,31 +235,21 @@
               <a style="cursor: pointer" (click)="onSelectItemTrailer(item,i)">{{ i + 1 }}</a>
             </td>
             <td class="text-center text-danger">
-              <a style="cursor: pointer" (click)="onSelectItemTrailer(item,i)"><i class="fab fa-youtube"></i></a>
+              <a style="cursor: pointer" (click)="onSelectItemTrailer(item,i)">{{item.CompanyName}}</a>
+              <span>{{item.CompanyID}}</span>
             </td>
-            <td class="text-primary font-weight-bold text-center">
-              <a style="cursor: pointer" style="cursor: pointer" (click)="onSelectItemTrailer(item,i)">{{ item.name
-                }}</a>
-            </td>
-            <td class="font-weight-bold text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              <a style="cursor: pointer" href="https://en.wikipedia.org/wiki/{{ item.wikipediaLink }}"><i
-                  class="fab fa-wikipedia-w text-success fw-bold"></i></a>
+            <td class="text-center text-danger">
+              <a style="cursor: pointer" (click)="onSelectItemTrailer(item,i)">{{item.SecurityName}}</a>
+              <span>{{item.SecurityNumber}}</span>
             </td>
             <td class="font-weight-bold text-center">
-              <a (click)="onSelectItemTrailer(item,i)">{{ item.releaseDate }}</a>
+              <a (click)="onSelectItemTrailer(item,i)">{{ item.MeetingEffectiveDate }}</a>
             </td>
-            <td class="text-end d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              <a (click)="onSelectItemTrailer(item,i)">$ {{ item.worldwide | number }} </a>
-
+            <td class="font-weight-bold text-center">
+              <a (click)="onSelectItemTrailer(item,i)">{{ item.MeetingCloseDateTime }}</a>
             </td>
-            <td class="text-end d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              <a (click)="onSelectItemTrailer(item,i)">$ {{ item.international | number }} </a>
-            </td>
-            <td class="text-end d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              <a (click)="onSelectItemTrailer(item,i)">$ {{ item.domestic | number }} </a>
-            </td>
-            <td class="text-end d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              <a (click)="onSelectItemTrailer(item,i)">$ {{ item.budget | number }} </a>
+            <td class="text-center text-danger">
+              <a (click)="onSelectItemTrailer(item,i)">{{ item.VotingItemSubject }} </a>
             </td>
           </tr>
         </tbody>
