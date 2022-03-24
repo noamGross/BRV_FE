@@ -226,8 +226,8 @@
               Meeting Effective Date<i class="ms-1 fas fa-long-arrow-alt-up"></i>
             </th>
             <th style="cursor: pointer" class="text-center d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-              Voting Item Subject<i class="ms-1 fas fa-arrows-alt-v filterEnabled"></i></th>
-          </tr>
+              Status<i class="ms-1 fas fa-long-arrow-alt-up"></i>
+            </th>
         </thead>
         <tbody>
           <tr *ngFor="let item of items; let i=index;">
@@ -249,7 +249,7 @@
               <a (click)="onSelectItemTrailer(item,i)">{{ item.MeetingCloseDateTime }}</a>
             </td>
             <td class="text-center text-danger">
-              <a (click)="onSelectItemTrailer(item,i)">{{ item.VotingItemSubject }} </a>
+              <a (click)="onSelectItemTrailer(item,i)">{{ GetStatus(item.Status) }} </a>
             </td>
           </tr>
         </tbody>

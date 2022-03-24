@@ -5,7 +5,8 @@ export class Item {
   SecurityNumber:string;
   MeetingEffectiveDate:string;
   MeetingCloseDateTime:string;
-  VotingItemSubject:string
+  VotingItemSubject:string;
+  Status:number;
 
 
 
@@ -18,5 +19,6 @@ export class Item {
   this.MeetingEffectiveDate='';
   this.MeetingCloseDateTime='';
   this.VotingItemSubject='';
+  this.Status=1;
   }
 }
