@@ -11,7 +11,9 @@
   -webkit-border-radius: 0.125rem;
   border-radius: 0.125rem;
 }
-
+.cursor{
+  color: black;
+}
 .nga-btn-boxoffice:hover, .nga-btn-boxoffice:active, .nga-btn-boxoffice:focus {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
@@ -81,4 +83,7 @@
 .nga-z-depth {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important
+}
+td .text-center text-danger{
+  color: black;
 }

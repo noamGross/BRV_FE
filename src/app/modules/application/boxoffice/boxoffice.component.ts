@@ -85,7 +85,8 @@ export class BoxofficeComponent implements OnInit {
   }
 
   onSelectItemTrailer(item: any, id: any) {
-    this.player = item.youtubeLink;
+    this.router.navigate(['/boxoffice',item.VotingboxID]);
+    /*this.player = item.youtubeLink;
     this.playerLoaded = true;
     if (this.modalPlayer === undefined) {
       this.modalPlayer = new bootstrap.Modal(document.getElementById('exampleModal'), {
@@ -95,7 +96,7 @@ export class BoxofficeComponent implements OnInit {
       selectPlayer?.addEventListener('show.bs.modal', this.onShowModal.bind(this));
       selectPlayer?.addEventListener('hidden.bs.modal', this.onCloseModal.bind(this));
     }
-    this.modalPlayer?.show();
+    this.modalPlayer?.show();*/
   }
 
   onShowModal() {
@@ -118,4 +119,14 @@ export class BoxofficeComponent implements OnInit {
       return "open for voting"
     }
   }
+  GetClassStatus(status: number):any{
+    console.log(status);
+    switch(status){
+      case 1:
+        return "btn btn-primary me-2"
+      case 2:
+        return "btn btn-success me-2"
+      }
+  }
 }
+

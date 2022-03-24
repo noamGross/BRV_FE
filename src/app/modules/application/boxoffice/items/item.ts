@@ -1,12 +1,13 @@
 export class Item {
+  VotingboxID:string
   CompanyID: string;
   CompanyName: string;
   SecurityName:string;
   SecurityNumber:string;
   MeetingEffectiveDate:string;
   MeetingCloseDateTime:string;
-  VotingItemSubject:string;
   Status:number;
+  MeetingAddress:string;
 
 
 
@@ -18,7 +19,8 @@ export class Item {
   this.SecurityNumber='';
   this.MeetingEffectiveDate='';
   this.MeetingCloseDateTime='';
-  this.VotingItemSubject='';
   this.Status=1;
+  this.VotingboxID='';
+  this.MeetingAddress='';
   }
 }
