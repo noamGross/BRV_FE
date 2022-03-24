@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
-
 import { Item } from './items/item';
 import { ItemsService } from './items/items.service';
 import { environment } from '../../../../environments/environment';
@@ -85,7 +84,7 @@ export class BoxofficeComponent implements OnInit {
   }
 
   onSelectItemTrailer(item: any, id: any) {
-    this.router.navigate(['/boxoffice',item.VotingboxID]);
+    this.router.navigate(['../VotingResults',item.VotingboxID]);
     /*this.player = item.youtubeLink;
     this.playerLoaded = true;
     if (this.modalPlayer === undefined) {

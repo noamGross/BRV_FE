@@ -37,7 +37,7 @@ const routes: Routes = [
       .then(mod => mod.BoxofficeFormModule)
   },
   {
-    path: 'voteingResults',
+    path: 'voteingResults/:id',
     loadChildren: () => import('./modules/application/VotingResults/votingResults.module')
       .then(mod => mod.votingResultsModule)
   },
