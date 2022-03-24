@@ -109,5 +109,13 @@ export class BoxofficeComponent implements OnInit {
   addItem() {
     this.router.navigate(['/movies', 0]);
   }
+  GetStatus(status: number):any{
 
+    switch(status){
+    case 1:
+      return "not yet open"
+    case 2:
+      return "open for voting"
+    }
+  }
 }
