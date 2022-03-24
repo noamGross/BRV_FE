@@ -5,7 +5,6 @@ import { Item } from './items/item';
 import { ItemsService } from './items/items.service';
 import { environment } from '../../../../environments/environment';
 
-
 declare const bootstrap: any;
 
 @Component({
@@ -82,9 +81,9 @@ export class BoxofficeComponent implements OnInit {
         }
       );
   }
-
+ 
   onSelectItemTrailer(item: any, id: any) {
-    this.router.navigate(['../VotingResults',item.VotingboxID]);
+    this.router.navigate(['../../../../../../VotingResults',item.VotingboxID]);
     /*this.player = item.youtubeLink;
     this.playerLoaded = true;
     if (this.modalPlayer === undefined) {
