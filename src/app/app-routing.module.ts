@@ -32,6 +32,11 @@ const routes: Routes = [
       .then(mod => mod.BoxofficeFormModule)
   },
   {
+    path: 'voteingResults',
+    loadChildren: () => import('./modules/application/VotingResults/votingResults.module')
+      .then(mod => mod.votingResultsModule)
+  },
+  {
     path: 'modal',
     loadChildren: () => import('./modules/application/example-modal/tutorial.module')
       .then(mod => mod.TutorialModule)

@@ -6,7 +6,6 @@ import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from './components/footer/footer.module';
 
@@ -22,6 +21,7 @@ import { FooterModule } from './components/footer/footer.module';
     HttpClientModule,
     HeaderModule,
     FooterModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
