@@ -6,11 +6,11 @@
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseOne' + i"
         aria-expanded="false" [attr.aria-controls]="'collapseOne' + i">
-        Company: {{item.CompanyName}}<br>
-        MeetingType: {{item.MeetingTypeDescription}} <br><!--"annual meeting"-->
-        {{item.MeetingAddress}} <br><!--""Millennium Tower, 23 Aranha st., 22nd Floor, Tel Aviv, Israel or via Zoom.""-->
-        {{item.MeetingDateTime}}
-        {{item.MeetingCloseDateTime}}
+        Company:         {{item.CompanyName}}<br>
+        Meeting Type:    {{item.MeetingTypeDescription}} <br><!--"annual meeting"-->
+        Meeting Address: {{item.MeetingAddress}} <br><!--""Millennium Tower, 23 Aranha st., 22nd Floor, Tel Aviv, Israel or via Zoom.""-->
+        Meeting Date:    {{item.MeetingDateTime}}<br>
+        Close Date:      {{item.MeetingCloseDateTime}}<br>
 
 
 <!--
@@ -29,12 +29,26 @@
     <div [attr.id]="'collapseOne' + i"  class="accordion-collapse collapse hide" aria-labelledby="headingOne"
       data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-        collapse plugin adds the appropriate classes that we use to style each element. These classes
-        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
-        does limit overflow.
+        Security Number:  {{item.SecurityNumber}}<br>
+        Security Name:    {{item.SecurityName}} <br>
+
+
+        <div *ngFor="let vote of item.Voters">
+          <p>
+          "Subject": {{vote.VotingItemSubject}}<br>
+          "Majority": {{vote.Majority}}<br>
+          </p><br>
+          <div style="width: 400px;">
+            <canvas
+                baseChart
+                [data]="salesData()"
+                [type]="'bar'"
+                [options]="chartOptions"
+            >
+            </canvas>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
